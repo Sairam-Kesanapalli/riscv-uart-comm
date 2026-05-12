@@ -7,7 +7,7 @@
 # =============================================================================
 
 CC       = gcc
-CFLAGS   = -Wall -Wextra -Wpedantic -std=c11 -O2
+CFLAGS   = -Wall -Wextra -Wpedantic -std=gnu11 -O2
 TARGET   = uart_comm
 SRC      = uart_comm.c
 

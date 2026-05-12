@@ -57,7 +57,7 @@ cd riscv-uart-test
 make
 
 # Or manually with gcc:
-gcc -Wall -Wextra -Wpedantic -std=c11 -O2 -o uart_comm uart_comm.c
+gcc -Wall -Wextra -Wpedantic -std=gnu11 -O2 -o uart_comm uart_comm.c
 ```
 
 ## Usage
