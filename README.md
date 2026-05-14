@@ -55,6 +55,8 @@ cd riscv-uart-test
 
 # Build the program
 make
+# (Note: If it says "Nothing to be done for 'all'", it is already built! 
+# You can force a rebuild by running 'make clean && make')
 
 # Or manually with gcc:
 gcc -Wall -Wextra -Wpedantic -std=gnu11 -O2 -o uart_comm uart_comm.c
@@ -100,17 +102,18 @@ This will:
 **Terminal 1** — Create virtual serial port pair:
 ```bash
 socat -d -d pty,raw,echo=0 pty,raw,echo=0
-# Output will show two PTY paths, e.g.:
-#   ... N PTY is /dev/pts/3
+# Output will show two PTY paths. Note these numbers carefully!
+# For example:
 #   ... N PTY is /dev/pts/4
+#   ... N PTY is /dev/pts/5
 ```
 
-**Terminal 2** — Run the UART program on one PTY:
+**Terminal 2** — Run the UART program on ONE of the paths (e.g., /dev/pts/5):
 ```bash
-./uart_comm /dev/pts/3 9600
+./uart_comm /dev/pts/5 9600
 ```
 
-**Terminal 3** — Send data from the other PTY:
+**Terminal 3** — Send data to the OTHER path (e.g., /dev/pts/4):
 ```bash
 # Send a text message
 echo "Hello from the other side!" > /dev/pts/4
