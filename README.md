@@ -19,9 +19,15 @@ A Linux C program that initializes, configures, and communicates over a UART ser
 ├── uart_comm.c          # Main UART program (well-commented)
 ├── Makefile             # Build system
 ├── test_loopback.sh     # Automated test using socat virtual serial ports
+├── docs/                # Documentation directory
+│   └── arch_diag.png    # Architecture diagram
 ├── .gitignore           # Git ignore rules
 └── README.md            # This file
 ```
+
+## Architecture Diagram
+
+![Architecture Diagram](docs/arch_diag.png)
 
 ## Prerequisites
 
@@ -51,7 +57,7 @@ sudo usermod -aG dialout $USER
 ```bash
 # Clone the repository
 git clone https://github.com/Sairam-Kesanapalli/riscv-uart-comm.git
-cd riscv-uart-test
+cd riscv-uart-comm
 
 # Build the program
 make
