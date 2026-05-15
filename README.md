@@ -50,7 +50,7 @@ sudo usermod -aG dialout $USER
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/riscv-uart-test.git
+git clone https://github.com/Sairam-Kesanapalli/riscv-uart-comm.git
 cd riscv-uart-test
 
 # Build the program
